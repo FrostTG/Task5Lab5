@@ -13,15 +13,15 @@ namespace Task5Lab5
             Console.Write("Введите число N=");
             int N = Convert.ToInt32(Console.ReadLine());
             int[,] mas = new int[N, N];
-            Random random = new Random();
+            //Random random = new Random();
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    mas[i, j] = random.Next(0, 2);
+                    mas[i, j] = 1 - (i + j) % 2; // random.Next(0, 2);
                     Console.Write("{0} ", mas[i, j]);
                 }
-                Console.WriteLine(); //забыл написать эту строчку и два часа сидел не мог понять почему у меня массив в строку собирается >_<
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
